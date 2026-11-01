@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: osmanlica-okuma-atolyesi
+    runtime: node
+    plan: free
+    buildCommand: "echo Build gerekmiyor"
+    startCommand: "npm start"
+    envVars:
+      - key: GEMINI_MODEL
+        value: gemini-3.1-flash-lite
+      - key: GEMINI_FALLBACK_MODEL
+        value: gemini-3.8-flash
